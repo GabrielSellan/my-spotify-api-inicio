@@ -1,6 +1,7 @@
-package com.my.spotify.api.controller;
+package com.myspotify.controller;
 
 import java.net.URI;
+
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.my.spotify.api.domain.model.User;
-import com.my.spotify.api.service.UserService;
+import com.myspotify.model.User;
+import com.myspotify.service.UserService;
 
 @RestController
 @RequestMapping("/users")
@@ -31,7 +32,7 @@ public class UserController {
 	}
 	
 	
-	@PostMapping()
+	@PostMapping
 	public ResponseEntity<User> create(@RequestBody User userToCreate){
 		var userCreated = userService.create(userToCreate);
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest()

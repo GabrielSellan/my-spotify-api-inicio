@@ -1,4 +1,4 @@
-package com.my.spotify.api.domain.model;
+package com.myspotify.model;
 
 import java.util.List;
 

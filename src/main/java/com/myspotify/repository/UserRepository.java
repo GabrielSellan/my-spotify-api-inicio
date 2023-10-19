@@ -1,8 +1,10 @@
-package com.my.spotify.api.domain.repository;
+package com.myspotify.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.my.spotify.api.domain.model.User;
+import com.myspotify.model.User;
+
+
 
 public interface UserRepository extends JpaRepository<User, Long>{
 

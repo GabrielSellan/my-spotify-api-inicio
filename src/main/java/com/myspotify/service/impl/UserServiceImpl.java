@@ -1,11 +1,12 @@
-package com.my.spotify.api.service.impl;
+package com.myspotify.service.impl;
 
 import java.util.NoSuchElementException;
+
 import org.springframework.stereotype.Service;
 
-import com.my.spotify.api.domain.model.User;
-import com.my.spotify.api.domain.repository.UserRepository;
-import com.my.spotify.api.service.UserService;
+import com.myspotify.model.User;
+import com.myspotify.repository.UserRepository;
+import com.myspotify.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -30,6 +31,5 @@ public class UserServiceImpl implements UserService{
 		return userRepository.save(userToCreate);
 	}
 
-	
 	
 }

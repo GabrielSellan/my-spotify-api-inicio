@@ -1,4 +1,4 @@
-package com.my.spotify.api.domain.model;
+package com.myspotify.model;
 
 import java.util.List;
 
@@ -10,19 +10,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
-@Entity(name = "tb_user")
-public class User {
-
+@Entity(name = "playlist_session_db")
+public class PlaylistSession {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String name;
+	private String title;
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private List<PlaylistSession> sessions;
-	
+	private List<Playlist> playlists;
 
+	
 	public Long getId() {
 		return id;
 	}
@@ -31,21 +31,23 @@ public class User {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public List<PlaylistSession> getSessions() {
-		return sessions;
+	public List<Playlist> getPlaylists() {
+		return playlists;
 	}
 
-	public void setSessions(List<PlaylistSession> sessions) {
-		this.sessions = sessions;
+	public void setPlaylists(List<Playlist> playlists) {
+		this.playlists = playlists;
 	}
 	
 
+	
+	
 }

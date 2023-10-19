@@ -1,6 +1,6 @@
-package com.my.spotify.api.service;
+package com.myspotify.service;
 
-import com.my.spotify.api.domain.model.User;
+import com.myspotify.model.User;
 
 public interface UserService {
 	
