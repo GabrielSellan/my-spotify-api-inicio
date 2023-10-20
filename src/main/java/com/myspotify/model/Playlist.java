@@ -25,8 +25,16 @@ public class Playlist {
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Song> songs;
-
 	
+	
+	public List<Song> getSongs() {
+		return songs;
+	}
+
+	public void setSongs(List<Song> songs) {
+		this.songs = songs;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -58,16 +66,5 @@ public class Playlist {
 	public void setCreatorName(String creatorName) {
 		this.creatorName = creatorName;
 	}
-
-	public List<Song> getSongs() {
-		return songs;
-	}
-
-	public void setSongs(List<Song> songs) {
-		this.songs = songs;
-	}
-	
-
-	
 	
 }
